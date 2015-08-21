@@ -1,0 +1,44 @@
+# This is your config file, it is where you will set your API keys and default
+# options. Make sure it is located in the same directory as tscquery.py, as
+# that is the script that reads this. Go ahead and read the tscquery library,
+# you may find out information on how this data is being used.
+
+### Query Caching #############################################################
+# Optionally, you may enable query caching. This will save you extra HTTP
+# requests and extra money.
+###############################################################################
+caching:
+    enabled: true
+    # The amount of time, in seconds, to hold on to cached queries
+    # Reccomended Value: 86400 seconds (24 hours)
+    expire_after: 86400
+
+### Alcazar Networks ##########################################################
+# You are going to need an account set up with Alcazar Networks for LRN
+# queries. Their pricing is fairly decent. After you have an account and have
+# obtained an API key, fill out this information.
+###############################################################################
+alcazar:
+    # Your API key...
+    apikey: YOURAPIKEYHERE
+    # Default server to select, vaild options are 1 or 2 at this time of
+    # writing. This will be used in the url http://api[server].east.alca...
+    # Reccomended Value: 1
+    default_server: 1
+    # Wether to use extended queries by default. You get more information this
+    # way but it costs more.
+    # Reccomended Value: true
+    default_extended: true
+    # Default ANI for jurisdiction. Really dosen't matter, just set it to
+    # a valid phone number in your area. You should be setting this each time
+    # you make a query too, so this value may never be used...
+    default_ani: 19708709999
+
+### OpenCNAM ##################################################################
+# For CNAM queries... people like caller ID. Get your API key then fill this
+# out.
+###############################################################################
+opencnam:
+    # Your account SID and auth token
+    sid: YOURSIDHERE
+    token: YOURTOKENHERE

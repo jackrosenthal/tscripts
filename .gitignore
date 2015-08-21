@@ -1,0 +1,4 @@
+lcr.db
+query_cache.sqlite
+config.yaml
+__pycache__
